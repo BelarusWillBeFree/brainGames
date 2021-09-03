@@ -5,14 +5,14 @@
   "description": "project brain game",
   "main": "brain-games.js",
   "bin": {
-    "brain-games":"bin/brain-games.js"
+    "brain-games": "bin/brain-games.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies":{
+  "dependencies": {
     "readline-sync": "~1.4.10"
- },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BelarusWillBeFree/frontend-project-lvl1.git"
@@ -22,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/BelarusWillBeFree/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/BelarusWillBeFree/frontend-project-lvl1#readme"
+  "homepage": "https://github.com/BelarusWillBeFree/frontend-project-lvl1#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jest": "^24.4.0",
+    "jest": "^27.1.0"
+  }
 }
