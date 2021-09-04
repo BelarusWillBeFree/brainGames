@@ -1,11 +1,11 @@
-name: make lint
+name: make-lint
 on: push
 jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Run linter
+      - name: Run-linter
         # Run Linter
-        run: |
-          make lint
+        run: echo 'hello world'
+        #make lint
 
