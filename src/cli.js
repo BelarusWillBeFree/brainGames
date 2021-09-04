@@ -5,5 +5,6 @@ const cli = () => {
   const name = readlineSync.question('May I have your name? ');
   const MessageHello = `Hello ${name}`;
   console.log(MessageHello);
+  return name;
 };
 export default cli;
