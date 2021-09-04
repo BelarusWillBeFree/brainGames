@@ -4,5 +4,8 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
-      - name: run ESLint
-        run: npx eslint ./src/cli.js
+      - name: Run linter
+        # Run Linter
+        run: |
+          make lint
+
