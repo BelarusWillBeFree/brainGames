@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Run-linter
         # Run Linter
-        run: echo 'hello world'
+        run: npx eslint bin/brain-games.js
+        #echo 'hello world'
         #make lint
+        
 
