@@ -22,3 +22,4 @@
 [![Action Status](https://github.com/BelarusWillBeFree/frontend-project-lvl1/actions/workflows/makeLint.yml/badge.svg)](https://github.com/BelarusWillBeFree/frontend-project-lvl1/actions)
 [![asciicast](https://asciinema.org/a/CTvHSKcH4GBkp1AWaUQVaaMYz.svg)](https://asciinema.org/a/CTvHSKcH4GBkp1AWaUQVaaMYz) -install program
 [![asciicast](https://asciinema.org/a/ZmUZACP0A3V6NYg98KgXviuTh.svg)](https://asciinema.org/a/ZmUZACP0A3V6NYg98KgXviuTh) -brain-even
+[![asciicast](https://asciinema.org/a/r8qXBew74kHptAuMp2dumE9yE.svg)](https://asciinema.org/a/r8qXBew74kHptAuMp2dumE9yE) -brain-calc
