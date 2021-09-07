@@ -1,13 +1,7 @@
 #!/usr/bin/env node
 import index from '../src/index.js';
 import getRandom from '../src/getRandom.js';
-
-const checkPrimeNumber = (CheckingNumber) => {
-  for (let i = 1; i < CheckingNumber; i += 1) {
-    if (CheckingNumber % i === 0) return 'no';
-  }
-  return 'yes';
-};
+import checkPrimeNumber from '../games/checkPrimeNumber.js';
 
 const brainPrime = () => {
   const minValueRandomNum = 1;

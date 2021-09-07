@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import getNameUser from '../src/getNameUser.js';
-import inputNumberAndCheckEven from '../src/even.js';
+import inputNumberAndCheckEven from '../games/even.js';
 
 const brainEven = () => {
   const userName = getNameUser();

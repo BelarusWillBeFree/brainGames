@@ -1,17 +1,9 @@
 #!/usr/bin/env node
 import index from '../src/index.js';
+import getResultOperation from '../games/getResultOperation.js';
 
 const getRandom = (maxValue) => Math.floor(Math.random() * maxValue);
-const getResultOperation = (firstOperand, operation, secondOperand) => {
-  switch (operation) {
-    case '+':
-      return firstOperand + secondOperand;
-    case '-':
-      return firstOperand - secondOperand;
-    default:
-      return firstOperand * secondOperand;
-  }
-};
+
 const brainCalc = () => {
   const maxValueRandomNumbers = 100;
   const generalQuestion = 'What is the result of the expression?';
