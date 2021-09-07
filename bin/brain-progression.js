@@ -21,7 +21,7 @@ const brainProgression = () => {
       }
       firstElement += repetitionInterval;
     }
-    Questions[j] = Progression.join(', ');
+    Questions[j] = Progression.join(' ');
   }
   index(generalQuestion, Questions, Answers);
 };
