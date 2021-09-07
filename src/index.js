@@ -10,7 +10,7 @@ const index = (generalQuestion, Questions, Answers) => {
     console.log(`Question: ${question}`);
     const UserAnswer = readlineSync.question('Your answer: ');
     if (Number(UserAnswer) !== Answers[i]) {
-      console.log(`${UserAnswer} is wrong answer ;(. Correct answer was ${Answers[i]}.`);
+      console.log(`'${UserAnswer}' is wrong answer ;(. Correct answer was '${Answers[i]}'`);
       resultTest = false;
       break;
     }
