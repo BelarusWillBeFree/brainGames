@@ -1,4 +1,5 @@
 Проект "Игры разума"
+[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
 «Игры разума» — набор из пяти консольных игр, позволяющих улучшить работу мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагается пройти ее заново.
 Установка
@@ -18,7 +19,6 @@
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/BelarusWillBeFree/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/BelarusWillBeFree/frontend-project-lvl1/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 [![Action Status](https://github.com/BelarusWillBeFree/frontend-project-lvl1/actions/workflows/makeLint.yml/badge.svg)](https://github.com/BelarusWillBeFree/frontend-project-lvl1/actions)
 [![asciicast](https://asciinema.org/a/CTvHSKcH4GBkp1AWaUQVaaMYz.svg)](https://asciinema.org/a/CTvHSKcH4GBkp1AWaUQVaaMYz) -install program
 [![asciicast](https://asciinema.org/a/ZmUZACP0A3V6NYg98KgXviuTh.svg)](https://asciinema.org/a/ZmUZACP0A3V6NYg98KgXviuTh) -brain-even
