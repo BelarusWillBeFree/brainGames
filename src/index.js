@@ -8,8 +8,13 @@ const index = (generalQuestion, Questions, Answers) => {
   for (let i = 0; i < Questions.length; i += 1) {
     const question = Questions[i];
     console.log(`Question: ${question}`);
-    const UserAnswer = readlineSync.question('Your answer: ');
-    if (Number(UserAnswer) !== Answers[i]) {
+    let UserAnswer = readlineSync.question('Your answer: ');
+    if (typeof Answers[i] === 'number') {
+      UserAnswer = Number(UserAnswer);
+    } else {
+      UserAnswer = String(UserAnswer);
+    }
+    if (UserAnswer !== Answers[i]) {
       console.log(`'${UserAnswer}' is wrong answer ;(. Correct answer was '${Answers[i]}'`);
       resultTest = false;
       break;
