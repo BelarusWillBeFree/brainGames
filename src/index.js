@@ -16,7 +16,7 @@ const index = (generalQuestion, Questions, Answers) => {
       UserAnswer = String(UserAnswer);
     }
     if (UserAnswer !== Answers[i]) {
-      console.log(`'${UserAnswer}' is wrong answer ;(. Correct answer was '${Answers[i]}'`);
+      console.log(`"${UserAnswer}" is wrong answer ;(. Correct answer was "${Answers[i]}"`);
       resultTest = false;
       break;
     }
