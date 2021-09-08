@@ -1,8 +1,9 @@
 import readlineSync from 'readline-sync';
-import getNameUser from './getNameUser.js';
 
 const index = (generalQuestion, Questions, Answers) => {
-  const userName = getNameUser();
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello ${userName}`);
   console.log(generalQuestion);
   let resultTest = true;
   for (let i = 0; i < Questions.length; i += 1) {
