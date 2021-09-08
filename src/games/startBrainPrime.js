@@ -16,4 +16,5 @@ const startBrainPrime = () => {
   }
   index(generalQuestion, Questions, Answers);
 };
+
 export default startBrainPrime;
