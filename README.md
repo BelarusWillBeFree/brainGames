@@ -6,6 +6,7 @@
     Установите глобально Node.js последней версии в систему.
     Склонируйте созданный репозиторий проекта локально.
     Выполните установку зависимостей (make install)
+    Установить пакет как символическую ссылку (npm link)
     Запустите игры (команды в описании игр)
 
 Игры:
@@ -18,10 +19,9 @@
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/BelarusWillBeFree/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/BelarusWillBeFree/frontend-project-lvl1/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/3597d0757ec4720434d0/maintainability)](https://codeclimate.com/github/BelarusWillBeFree/frontend-project-lvl1/maintainability)
 [![Action Status](https://github.com/BelarusWillBeFree/frontend-project-lvl1/actions/workflows/makeLint.yml/badge.svg)](https://github.com/BelarusWillBeFree/frontend-project-lvl1/actions)
-[![asciicast](https://asciinema.org/a/CTvHSKcH4GBkp1AWaUQVaaMYz.svg)](https://asciinema.org/a/CTvHSKcH4GBkp1AWaUQVaaMYz) -install program
-[![asciicast](https://asciinema.org/a/ZmUZACP0A3V6NYg98KgXviuTh.svg)](https://asciinema.org/a/ZmUZACP0A3V6NYg98KgXviuTh) -brain-even
+[![asciicast](https://asciinema.org/a/0EQo4XrFFyPN31xIMZmOpCmcF.svg)](https://asciinema.org/a/0EQo4XrFFyPN31xIMZmOpCmcF) -brain-even
 [![asciicast](https://asciinema.org/a/r8qXBew74kHptAuMp2dumE9yE.svg)](https://asciinema.org/a/r8qXBew74kHptAuMp2dumE9yE) -brain-calc
 [![asciicast](https://asciinema.org/a/RnW2HQas9E0wBCAZF0HvmkJhx.svg)](https://asciinema.org/a/RnW2HQas9E0wBCAZF0HvmkJhx) -brain-gcd
 [![asciicast](https://asciinema.org/a/AEqtcGDBqgLgBNTpdjngR91b6.svg)](https://asciinema.org/a/AEqtcGDBqgLgBNTpdjngR91b6) -brain-progression 
