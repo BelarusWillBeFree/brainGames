@@ -1,8 +1,10 @@
-import getNameUser from '../getNameUser.js';
-import inputNumberAndCheckEven from './even.js';
+import readlineSync from 'readline-sync';
+import inputNumberAndCheckEven from '../inputNumberAndCheckEven.js';
 
 const startBrainEven = () => {
-  const userName = getNameUser();
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
   const resultTest = inputNumberAndCheckEven();
   if (resultTest) {
     console.log(`Congratulations, ${userName}!`);

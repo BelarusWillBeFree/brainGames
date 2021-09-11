@@ -1,10 +1,13 @@
 import readlineSync from 'readline-sync';
+import getRandom from './getRandom.js';
 
 const even = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   let resultTest = true;
-  for (let numerOfRepetitions = 0; numerOfRepetitions < 3; numerOfRepetitions += 1) {
-    const numberForCheck = Math.floor(Math.random() * 100);
+  const maxAmountQuestions = 3;
+  const maxValueRandomNumbers = 100;
+  for (let numerOfRepet = 0; numerOfRepet < maxAmountQuestions; numerOfRepet += 1) {
+    const numberForCheck = getRandom(maxValueRandomNumbers);
     console.log(`Question: ${numberForCheck}`);
     const UserAnswer = readlineSync.question('Your answer: ').toLowerCase();
     if (UserAnswer !== 'yes' && UserAnswer !== 'no') {

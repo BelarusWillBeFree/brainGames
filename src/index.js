@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
 
-const index = (generalQuestion, Questions, Answers) => {
+const index = (generalQuestion, inputParameters) => {
+  const Questions = inputParameters[0];
+  const Answers = inputParameters[1];
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
@@ -9,12 +11,7 @@ const index = (generalQuestion, Questions, Answers) => {
   for (let i = 0; i < Questions.length; i += 1) {
     const question = Questions[i];
     console.log(`Question: ${question}`);
-    let UserAnswer = readlineSync.question('Your answer: ');
-    if (typeof Answers[i] === 'number') {
-      UserAnswer = Number(UserAnswer);
-    } else {
-      UserAnswer = String(UserAnswer);
-    }
+    const UserAnswer = readlineSync.question('Your answer: ');
     if (UserAnswer !== Answers[i]) {
       console.log(`"${UserAnswer}" is wrong answer ;(. Correct answer was "${Answers[i]}"`);
       resultTest = false;
