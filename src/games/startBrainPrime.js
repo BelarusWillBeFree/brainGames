@@ -1,31 +1,34 @@
-import index from '../index.js';
+import run from '../index.js';
 import getRandom from '../getRandom.js';
 
-const checkPrimeNumber = (CheckingNumber) => {
+const generalQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const checkPrimeNumber = (checkingNumber) => {
   const firstNumberForDivision = 2;
-  for (let i = firstNumberForDivision; i < CheckingNumber; i += 1) {
-    if (CheckingNumber % i === 0) return 'no';
+  for (let i = firstNumberForDivision; i < checkingNumber; i += 1) {
+    if (checkingNumber % i === 0) return 'no';
   }
   return 'yes';
 };
-const generatingQuestionAndAnswerForBrainPrime = () => {
+const generateOneRound = () => {
   const minValueRandomNum = 1;
   const maxValueRandomNum = 100;
+  const numberQuestion = getRandom(maxValueRandomNum, minValueRandomNum);
+
+  const answer = checkPrimeNumber(numberQuestion);
+  const question = numberQuestion;
+  return [question, answer];
+};
+const generatingQuestionAndAnswerForBrainPrime = () => {
   const maxAmountQuestions = 3;
 
-  const generalQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const Questions = [];
-  const Answers = [];
+  const rounds = [];
   for (let i = 0; i < maxAmountQuestions; i += 1) {
-    const NumberQuestion = getRandom(maxValueRandomNum, minValueRandomNum);
-
-    Answers[i] = checkPrimeNumber(NumberQuestion);
-    Questions[i] = NumberQuestion;
+    rounds[i] = generateOneRound();
   }
-  return [generalQuestion, [Questions, Answers]];
+  return rounds;
 };
 const startBrainPrime = () => {
-  const [generalQuestion, QuestionsAndAnswers] = generatingQuestionAndAnswerForBrainPrime();
-  index(generalQuestion, QuestionsAndAnswers);
+  const questionsAndAnswers = generatingQuestionAndAnswerForBrainPrime();
+  run(generalQuestion, questionsAndAnswers);
 };
 export default startBrainPrime;

@@ -1,5 +1,7 @@
-import index from '../index.js';
+import run from '../index.js';
 import getRandom from '../getRandom.js';
+
+const generalQuestion = 'What is the result of the expression?';
 
 const getResultOperation = (firstOperand, operation, secondOperand) => {
   switch (operation) {
@@ -11,26 +13,28 @@ const getResultOperation = (firstOperand, operation, secondOperand) => {
       return String(firstOperand * secondOperand);
   }
 };
-const generatingQuestionAndAnswerForBrainCalc = () => {
+const generateOneRound = () => {
   const maxValueRandomNumbers = 100;
-  const generalQuestion = 'What is the result of the expression?';
-  const Questions = [];
-  const Answers = [];
+  const maxNumberOfOperation = 3;
+  const firstOperand = getRandom(maxValueRandomNumbers);
+  const operations = ['+', '-', '*'];
+  const operation = operations[getRandom(maxNumberOfOperation)];
+  const secondOperand = getRandom(maxValueRandomNumbers);
+  const question = `${firstOperand} ${operation} ${secondOperand}`;
+  const answer = getResultOperation(firstOperand, operation, secondOperand);
+  return [question, answer];
+};
+const generatingQuestionAndAnswerForBrainCalc = () => {
+  const rounds = [];
   const maxAmountQuestions = 3;
-  const Operations = ['+', '-', '*'];
   for (let i = 0; i < maxAmountQuestions; i += 1) {
-    const firstOperand = getRandom(maxValueRandomNumbers);
-    const operation = Operations[getRandom(3)];
-    const secondOperand = getRandom(maxValueRandomNumbers);
-
-    Questions[i] = `${firstOperand} ${operation} ${secondOperand}`;
-    Answers[i] = getResultOperation(firstOperand, operation, secondOperand);
+    rounds[i] = generateOneRound();
   }
-  return [generalQuestion, [Questions, Answers]];
+  return rounds;
 };
 const startBrainCalc = () => {
-  const [generalQuestion, QuestionsAndAnswers] = generatingQuestionAndAnswerForBrainCalc();
-  index(generalQuestion, QuestionsAndAnswers);
+  const questionsAndAnswers = generatingQuestionAndAnswerForBrainCalc();
+  run(generalQuestion, questionsAndAnswers);
 };
 
 export default startBrainCalc;

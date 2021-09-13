@@ -1,6 +1,7 @@
-import index from '../index.js';
+import run from '../index.js';
 import getRandom from '../getRandom.js';
 
+const generalQuestion = 'Find the greatest common divisor of given numbers.';
 const getResultGcd = (number1, number2) => {
   if (number1 === 0) return number2;
   if (number2 === 0) return number1;
@@ -9,24 +10,26 @@ const getResultGcd = (number1, number2) => {
   }
   return getResultGcd(number2 % number1, number1);
 };
-const generatingQuestionAndAnswerForBrainGcd = () => {
+const generateOneRound = () => {
   const maxValueRandomNumbers = 100;
-  const maxAmountQuestions = 3;
-  const generalQuestion = 'Find the greatest common divisor of given numbers.';
-  const Questions = [];
-  const Answers = [];
-  for (let i = 0; i < maxAmountQuestions; i += 1) {
-    const firstNumber = getRandom(maxValueRandomNumbers);
-    const secondNumber = getRandom(maxValueRandomNumbers);
+  const firstNumber = getRandom(maxValueRandomNumbers);
+  const secondNumber = getRandom(maxValueRandomNumbers);
 
-    Answers[i] = String(getResultGcd(firstNumber, secondNumber));
-    Questions[i] = `${firstNumber} ${secondNumber}`;
+  const answer = String(getResultGcd(firstNumber, secondNumber));
+  const question = `${firstNumber} ${secondNumber}`;
+  return [question, answer];
+};
+const generatingQuestionAndAnswerForBrainGcd = () => {
+  const maxAmountQuestions = 3;
+  const rounds = [];
+  for (let i = 0; i < maxAmountQuestions; i += 1) {
+    rounds[i] = generateOneRound();
   }
-  return [generalQuestion, [Questions, Answers]];
+  return rounds;
 };
 const startBrainGcd = () => {
-  const [generalQuestion, QuestionsAndAnswers] = generatingQuestionAndAnswerForBrainGcd();
-  index(generalQuestion, QuestionsAndAnswers);
+  const questionsAndAnswers = generatingQuestionAndAnswerForBrainGcd();
+  run(generalQuestion, questionsAndAnswers);
 };
 
 export default startBrainGcd;
