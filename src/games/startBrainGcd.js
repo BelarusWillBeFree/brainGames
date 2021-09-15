@@ -19,16 +19,16 @@ const generateOneRound = () => {
   const question = `${firstNumber} ${secondNumber}`;
   return [question, answer];
 };
-const generatingQuestionAndAnswerForBrainGcd = () => {
-  const maxAmountQuestions = 3;
+const generatingQuestionAndAnswer = () => {
+  const maxQuestionCount = 3;
   const rounds = [];
-  for (let i = 0; i < maxAmountQuestions; i += 1) {
+  for (let i = 0; i < maxQuestionCount; i += 1) {
     rounds[i] = generateOneRound();
   }
   return rounds;
 };
 const startBrainGcd = () => {
-  const questionsAndAnswers = generatingQuestionAndAnswerForBrainGcd();
+  const questionsAndAnswers = generatingQuestionAndAnswer();
   run(generalQuestion, questionsAndAnswers);
 };
 
