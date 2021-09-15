@@ -3,7 +3,7 @@ import getRandom from '../getRandom.js';
 
 const generalQuestion = 'What number is missing in the progression?';
 const generateOneRound = () => {
-  const Progression = [];
+  const progression = [];
   const maxRandomValue = 100;
   const maxValueRepetitionInterval = 20;
   const minValueRepetitionInterval = 1;
@@ -18,13 +18,13 @@ const generateOneRound = () => {
   for (let i = 0; i < amountOfElements; i += 1) {
     if ((i + 1) === hiddenElement) {
       answer = String(firstElement);
-      Progression[i] = '..';
+      progression[i] = '..';
     } else {
-      Progression[i] = firstElement;
+      progression[i] = firstElement;
     }
     firstElement += repetitionInterval;
   }
-  const question = Progression.join(' ');
+  const question = progression.join(' ');
   return [question, answer];
 };
 const generatingQuestionAndAnswerForBrainProgression = () => {

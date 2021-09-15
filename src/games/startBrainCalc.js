@@ -15,25 +15,25 @@ const getResultOperation = (firstOperand, operation, secondOperand) => {
 };
 const generateOneRound = () => {
   const maxValueRandomNumbers = 100;
-  const maxNumberOfOperation = 3;
+  const operationCount = 3;
   const firstOperand = getRandom(maxValueRandomNumbers);
   const operations = ['+', '-', '*'];
-  const operation = operations[getRandom(maxNumberOfOperation)];
+  const operation = operations[getRandom(operationCount)];
   const secondOperand = getRandom(maxValueRandomNumbers);
   const question = `${firstOperand} ${operation} ${secondOperand}`;
   const answer = getResultOperation(firstOperand, operation, secondOperand);
   return [question, answer];
 };
-const generatingQuestionAndAnswerForBrainCalc = () => {
+const generatingQuestionAndAnswers = () => {
   const rounds = [];
-  const maxAmountQuestions = 3;
-  for (let i = 0; i < maxAmountQuestions; i += 1) {
+  const questionCount = 3;
+  for (let i = 0; i < questionCount; i += 1) {
     rounds[i] = generateOneRound();
   }
   return rounds;
 };
 const startBrainCalc = () => {
-  const questionsAndAnswers = generatingQuestionAndAnswerForBrainCalc();
+  const questionsAndAnswers = generatingQuestionAndAnswers();
   run(generalQuestion, questionsAndAnswers);
 };
 
