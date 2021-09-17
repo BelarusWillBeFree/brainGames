@@ -2,7 +2,6 @@ import getRandom from '../getRandom.js';
 import { questionCount, index as run } from '../index.js';
 
 const maxValueRandomNumbers = 100;
-const operationCount = 3;
 
 const generalQuestion = 'What is the result of the expression?';
 
@@ -23,7 +22,7 @@ const generateOneRound = () => {
   const operations = ['+', '-', '*'];
   const firstOperand = getRandom(0, maxValueRandomNumbers);
   const secondOperand = getRandom(0, maxValueRandomNumbers);
-  const operation = operations[getRandom(0, operationCount)];
+  const operation = operations[getRandom(0, operations.length - 1)];
   const question = `${firstOperand} ${operation} ${secondOperand}`;
   const answer = getResultOperation(firstOperand, secondOperand, operation);
   return [question, answer];
