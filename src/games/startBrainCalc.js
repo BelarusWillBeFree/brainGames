@@ -1,37 +1,42 @@
-import run from '../index.js';
 import getRandom from '../getRandom.js';
+import { questionCount, index as run } from '../index.js';
+
+const maxValueRandomNumbers = 100;
+const operationCount = 3;
 
 const generalQuestion = 'What is the result of the expression?';
 
-const getResultOperation = (firstOperand, operation, secondOperand) => {
+const getResultOperation = (firstOperand, secondOperand, operation) => {
   switch (operation) {
     case '+':
       return String(firstOperand + secondOperand);
     case '-':
       return String(firstOperand - secondOperand);
-    default:
+    case '*':
       return String(firstOperand * secondOperand);
+    default:
+      throw new Error(`Operation ${operation} is not supported`);
   }
 };
+
 const generateOneRound = () => {
-  const maxValueRandomNumbers = 100;
-  const operationCount = 3;
-  const firstOperand = getRandom(maxValueRandomNumbers);
   const operations = ['+', '-', '*'];
-  const operation = operations[getRandom(operationCount)];
-  const secondOperand = getRandom(maxValueRandomNumbers);
+  const firstOperand = getRandom(0, maxValueRandomNumbers);
+  const secondOperand = getRandom(0, maxValueRandomNumbers);
+  const operation = operations[getRandom(0, operationCount)];
   const question = `${firstOperand} ${operation} ${secondOperand}`;
-  const answer = getResultOperation(firstOperand, operation, secondOperand);
+  const answer = getResultOperation(firstOperand, secondOperand, operation);
   return [question, answer];
 };
+
 const generatingQuestionAndAnswers = () => {
   const rounds = [];
-  const questionCount = 3;
   for (let i = 0; i < questionCount; i += 1) {
-    rounds[i] = generateOneRound();
+    rounds.push(generateOneRound());
   }
   return rounds;
 };
+
 const startBrainCalc = () => {
   const questionsAndAnswers = generatingQuestionAndAnswers();
   run(generalQuestion, questionsAndAnswers);

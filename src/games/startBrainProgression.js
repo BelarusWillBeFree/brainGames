@@ -1,42 +1,49 @@
-import run from '../index.js';
+import { questionCount, index as run } from '../index.js';
 import getRandom from '../getRandom.js';
 
+const maxRandomValue = 100;
+const maxValueRepetitionInterval = 20;
+const maxValueAmountOfElements = 10;
+const minValueAmountOfElements = 5;
+
 const generalQuestion = 'What number is missing in the progression?';
-const generateOneRound = () => {
+
+const getProgression = () => {
   const progression = [];
-  const maxRandomValue = 100;
-  const maxValueRepetitionInterval = 20;
-  const minValueRepetitionInterval = 1;
-  const maxValueAmountOfElements = 10;
-  const minValueAmountOfElements = 5;
-  const minValueHiddenElement = 1;
-  let firstElement = getRandom(maxRandomValue);
-  const repetitionInterval = getRandom(maxValueRepetitionInterval, minValueRepetitionInterval);
-  const amountOfElements = getRandom(maxValueAmountOfElements, minValueAmountOfElements);
-  const hiddenElement = getRandom(amountOfElements, minValueHiddenElement);
-  let answer = '';
+  const amountOfElements = getRandom(minValueAmountOfElements, maxValueAmountOfElements);
+  let firstElement = getRandom(0, maxRandomValue);
+  const repetitionInterval = getRandom(1, maxValueRepetitionInterval);
   for (let i = 0; i < amountOfElements; i += 1) {
-    if ((i + 1) === hiddenElement) {
-      answer = String(firstElement);
-      progression[i] = '..';
-    } else {
-      progression[i] = firstElement;
-    }
+    progression[i] = firstElement;
     firstElement += repetitionInterval;
   }
-  const question = progression.join(' ');
-  return [question, answer];
+  return progression;
 };
+
+const generateOneRound = () => {
+  const progression = getProgression();
+  const hiddenElement = getRandom(0, progression.length - 1);
+  let answer = '';
+  for (let i = 0; i < progression.length; i += 1) {
+    if (i === hiddenElement) {
+      answer = String(progression[i]);
+      progression[i] = '..';
+    }
+  }
+  return [progression.join(' '), answer];
+};
+
 const generatingQuestionAndAnswerForBrainProgression = () => {
   const rounds = [];
-  const maxAmountQuestions = 3;
-  for (let j = 0; j < maxAmountQuestions; j += 1) {
-    rounds[j] = generateOneRound();
+  for (let j = 0; j < questionCount; j += 1) {
+    rounds.push(generateOneRound());
   }
   return rounds;
 };
+
 const startBrainProgression = () => {
   const questionsAndAnswers = generatingQuestionAndAnswerForBrainProgression();
   run(generalQuestion, questionsAndAnswers);
 };
+
 export default startBrainProgression;
