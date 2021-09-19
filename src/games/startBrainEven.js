@@ -1,18 +1,15 @@
-import { questionCount, index as run } from '../index.js';
+import { questionCount, run } from '../index.js';
 import getRandom from '../getRandom.js';
 
 const maxValueRandomNum = 100;
 
 const generalQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const checkPrimeNumber = (checkingNumber) => {
-  if (checkingNumber % 2 === 0) return 'yes';
-  return 'no';
-};
+const isPrime = (checkingNumber) => checkingNumber % 2 === 0;
 
 const generateOneRound = () => {
   const numberQuestion = getRandom(1, maxValueRandomNum);
-  const answer = checkPrimeNumber(numberQuestion);
+  const answer = isPrime(numberQuestion) ? 'yes' : 'no';
   const question = numberQuestion;
   return [question, answer];
 };

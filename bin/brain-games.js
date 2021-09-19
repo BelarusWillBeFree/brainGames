@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import cli from '../src/cli.js';
+import enterNameAndGreet from '../src/enterNameAndGreet.js';
 
 console.log('Welcome to the Brain Games!');
-cli();
+enterNameAndGreet();
