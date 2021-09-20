@@ -1,4 +1,4 @@
-import { questionCount, run } from '../index.js';
+import run, { questionCount } from '../index.js';
 import getRandom from '../getRandom.js';
 
 const maxRandomValue = 100;
@@ -8,8 +8,7 @@ const minValueAmountOfElements = 5;
 
 const generalQuestion = 'What number is missing in the progression?';
 
-const getProgression = (paramForGeneration) => {
-  const [amountOfElements, firstElement, repetitionInterval] = paramForGeneration;
+const getProgression = (amountOfElements, firstElement, repetitionInterval) => {
   let valueProgression = firstElement;
   const progression = [];
   for (let i = 0; i < amountOfElements; i += 1) {

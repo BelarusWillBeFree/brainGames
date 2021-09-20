@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 export const questionCount = 3;
 
-export const run = (generalQuestion, questionsAnswers) => {
+export default (generalQuestion, questionsAnswers) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);

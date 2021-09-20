@@ -1,4 +1,4 @@
-import { questionCount, run } from '../index.js';
+import run, { questionCount } from '../index.js';
 import getRandom from '../getRandom.js';
 
 const maxValueRandomNumbers = 100;
