@@ -31,7 +31,7 @@ const generateOneRound = () => {
   const amountOfElements = getRandom(minValueAmountOfElements, maxValueAmountOfElements);
   const firstElement = getRandom(0, maxRandomValue);
   const repetitionInterval = getRandom(1, maxValueRepetitionInterval);
-  const progression = getProgression([amountOfElements, firstElement, repetitionInterval]);
+  const progression = getProgression(amountOfElements, firstElement, repetitionInterval);
   const hiddenElement = getRandom(0, progression.length - 1);
   const answer = String(progression[hiddenElement]);
   const question = getQuestionWithHiddenElement([progression, hiddenElement]);
