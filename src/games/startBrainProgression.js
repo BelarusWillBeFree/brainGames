@@ -17,14 +17,14 @@ const getProgression = (amountOfElements, firstElement, repetitionInterval) => {
   }
   return progression;
 };
-const getQuestionWithHiddenElement = (paramForProgression) => {
-  const [progression, hiddenElement] = paramForProgression;
-  for (let i = 0; i < progression.length; i += 1) {
+const getQuestionWithHiddenElement = (progression, hiddenElement) => {
+  const progress = progression;
+  for (let i = 0; i < progress.length; i += 1) {
     if (i === hiddenElement) {
-      progression[i] = '..';
+      progress[i] = '..';
     }
   }
-  return progression.join(' ');
+  return progress.join(' ');
 };
 
 const generateOneRound = () => {
@@ -34,7 +34,7 @@ const generateOneRound = () => {
   const progression = getProgression(amountOfElements, firstElement, repetitionInterval);
   const hiddenElement = getRandom(0, progression.length - 1);
   const answer = String(progression[hiddenElement]);
-  const question = getQuestionWithHiddenElement([progression, hiddenElement]);
+  const question = getQuestionWithHiddenElement(progression, hiddenElement);
   return [question, answer];
 };
 
