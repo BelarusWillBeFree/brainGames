@@ -14,7 +14,7 @@ const generateOneRound = () => {
   return [question, answer];
 };
 
-const generatingQuestionAndAnswer = () => {
+const generateQuestionAndAnswer = () => {
   const rounds = [];
   for (let i = 0; i < questionCount; i += 1) {
     rounds.push(generateOneRound());
@@ -23,7 +23,7 @@ const generatingQuestionAndAnswer = () => {
 };
 
 const startBrainEven = () => {
-  const questionsAndAnswers = generatingQuestionAndAnswer();
+  const questionsAndAnswers = generateQuestionAndAnswer();
   run(generalQuestion, questionsAndAnswers);
 };
 

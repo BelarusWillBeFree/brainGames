@@ -9,7 +9,7 @@ const isPrime = (checkingNumber) => {
   for (let i = firstNumberForDivision; i < checkingNumber; i += 1) {
     if (checkingNumber % i === 0) return false;
   }
-  return true;
+  return checkingNumber > firstNumberForDivision;
 };
 
 const generateOneRound = () => {
