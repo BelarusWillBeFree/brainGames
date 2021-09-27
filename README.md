@@ -21,7 +21,7 @@
 [![Actions Status](https://github.com/BelarusWillBeFree/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/BelarusWillBeFree/frontend-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/3597d0757ec4720434d0/maintainability)](https://codeclimate.com/github/BelarusWillBeFree/frontend-project-lvl1/maintainability)
 [![Action Status](https://github.com/BelarusWillBeFree/frontend-project-lvl1/actions/workflows/makeLint.yml/badge.svg)](https://github.com/BelarusWillBeFree/frontend-project-lvl1/actions)
-[![asciicast](https://asciinema.org/a/zrYTcGvqAaPGCo7SmSGVSec6h.svg)](https://asciinema.org/a/zrYTcGvqAaPGCo7SmSGVSec6h)
+[![asciicast](https://asciinema.org/connect/ddfab6f6-66e3-4a8a-baba-f21ce93409ee.svg)](https://asciinema.org/connect/ddfab6f6-66e3-4a8a-baba-f21ce93409ee)
 install
 [![asciicast](https://asciinema.org/a/yPooNqJdtZMUFGnRFHsbeACeL.svg)](https://asciinema.org/a/yPooNqJdtZMUFGnRFHsbeACeL) -brain-even
 [![asciicast](https://asciinema.org/a/JR68tjcRjXTzg2C4IFjS7Q3pS.svg)](https://asciinema.org/a/JR68tjcRjXTzg2C4IFjS7Q3pS) -brain-calc
