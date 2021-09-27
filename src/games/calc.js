@@ -36,9 +36,9 @@ const generatingQuestionAndAnswers = () => {
   return rounds;
 };
 
-const startBrainCalc = () => {
+const calc = () => {
   const questionsAndAnswers = generatingQuestionAndAnswers();
   run(generalQuestion, questionsAndAnswers);
 };
 
-export default startBrainCalc;
+export default calc;

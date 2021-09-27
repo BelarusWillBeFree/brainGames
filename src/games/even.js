@@ -22,9 +22,9 @@ const generateQuestionAndAnswer = () => {
   return rounds;
 };
 
-const startBrainEven = () => {
+const even = () => {
   const questionsAndAnswers = generateQuestionAndAnswer();
   run(generalQuestion, questionsAndAnswers);
 };
 
-export default startBrainEven;
+export default even;
